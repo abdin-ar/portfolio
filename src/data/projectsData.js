@@ -1,0 +1,81 @@
+const projectsData = [
+  {
+    id: 0,
+    no: 0,
+    title: "Henriette Chicken Farms",
+    type: "Brochure Website",
+    website: "https://henriette-farms.onrender.com",
+    source: "https://github.com/abdin-ar/henriette-chicken-farms-vanilla",
+    frontend: "HTML, CSS, Javascript",
+    backend: "None (currently under construction)",
+    description:
+      "A brochure website for a fictitious business called 'Henriette Chicken Farms'. This version was created without using any library or framework. There is another similar version of this website built with React.",
+    image: "henriette-farms",
+  },
+  {
+    id: 1,
+    no: 1,
+    title: "Henriette Chicken Farms",
+    type: "Brochure Website",
+    website: "https://henriette-chicken-farms.onrender.com",
+    source: "https://github.com/abdin-ar/henriette-chicken-farms-react",
+    frontend: "CSS, React",
+    backend: "None (currently under construction)",
+    description:
+      "A brochure website for a fictitious business called 'Henriette Chicken Farms'. This version was created with React. There is another similar version of this website built without using any library or framework.",
+    image: "henriette-chicken-farms",
+  },
+  {
+    id: 2,
+    no: 2,
+    title: "Odontom Journal",
+    type: "Journal Website",
+    website: "https://odontom.onrender.com",
+    source: "https://github.com/abdin-ar/odontom-journal-vanilla",
+    frontend: "HTML, CSS, Javascript",
+    backend: "None (currently under construction)",
+    description: "A website for a fictitious journal called 'Odontom'.",
+    // description:
+    //   "A website for a fictitious journal called 'Odontom'. This version was created without using any library or framework. There is another similar version of this website built with React.",
+    image: "odontom",
+  },
+  // {
+  //   id: 3,
+  //   no: 3,
+  //   title: "Odontom Journal",
+  //   type: "Journal Website",
+  //   website: "www.odontom-journal.netlify.app",
+  //   source: "www.github.com",
+  //   frontend: "CSS, React",
+  //   backend: "None (currently under construction)",
+  //   description:
+  //     "A website for a fictitious journal called 'Odontom'. This version was created with React. There is another similar version of this website built without using any library or framework.",
+  //   image: "odontom-journal",
+  // },
+  {
+    id: 4,
+    no: 4,
+    title: "Classy Footwear",
+    type: "ECommerce Website",
+    website: "https://classyfootwear.onrender.com",
+    source: "https://github.com/abdin-ar/classy-footwear",
+    frontend: "CSS, React",
+    backend: "None (currently under construction)",
+    description:
+      "An ecommerce website for a fictitious business called 'Classy Footwear'.",
+    image: "classy-footwear",
+  },
+  {
+    id: 5,
+    no: 5,
+    title: "Abdin Web Dev",
+    type: "Personal Website",
+    // source: "www.github.com",
+    frontend: "CSS, React",
+    backend: "None (currently under construction)",
+    description: "My personal portfolio website (current website).",
+    image: "abdin-webdev",
+  },
+];
+
+export default projectsData;
