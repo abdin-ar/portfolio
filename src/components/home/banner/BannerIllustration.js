@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import illustrationData from "../../../data/illustrationData";
 import IllustrationSlide from "./IllustrationSlide";
 
+const IllustrationSlideTiming = 6500;
+
 const BannerIllustration = () => {
   const [slideIndex, setSlideIndex] = useState(-1);
 
@@ -13,7 +15,7 @@ const BannerIllustration = () => {
         }
         return prev + 1;
       });
-    }, 8000);
+    }, IllustrationSlideTiming);
 
     return () => {
       clearInterval(interval);
@@ -56,6 +58,7 @@ const BannerIllustration = () => {
               images={images}
               slideIndex={slideIndex}
               illustrationDataLength={illustrationData.length - 1}
+              IllustrationSlideTiming={IllustrationSlideTiming}
             />
           );
         })}

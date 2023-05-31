@@ -3564,7 +3564,7 @@ ul:not(.ul) {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: hsl(var(--primary-base), var(--primary-80));
+  /* background-color: hsl(var(--primary-base), var(--primary-80)); */
   background-image: linear-gradient(
     150deg,
     hsl(var(--primary-base), var(--primary-70)),
@@ -3572,6 +3572,9 @@ ul:not(.ul) {
     hsl(var(--primary-base), var(--primary-90)),
     hsl(var(--primary-base), var(--primary-70))
   );
+  background-size: 100% calc(100% - 4px);
+  background-repeat: no-repeat;
+  background-position: 0 2px;
   position: absolute;
   overflow: hidden;
   z-index: -1;
@@ -3616,7 +3619,7 @@ ul:not(.ul) {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: hsl(var(--primary-base), var(--primary-80));
+  /* background-color: hsl(var(--primary-base), var(--primary-80)); */
   background-image: linear-gradient(
     160deg,
     hsl(var(--primary-base), var(--primary-70)),
@@ -3624,6 +3627,9 @@ ul:not(.ul) {
     hsl(var(--primary-base), var(--primary-90)),
     hsl(var(--primary-base), var(--primary-70))
   );
+  background-size: 100% calc(100% - 2px);
+  background-repeat: no-repeat;
+  background-position: 0 2px;
   position: absolute;
   overflow: hidden;
   z-index: -1;
@@ -3640,6 +3646,14 @@ ul:not(.ul) {
   z-index: 0;
   background-color: hsl(var(--grey-base), var(--grey-95));
   clip-path: ellipse(60vw 10vw at center -2vw);
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(475px, var(--max-width)), 1fr)
+  );
 }
 
 /* +++++++++++++++ end of GLOBAL COMPONENT CLASSES +++++++++++++++ */
@@ -4072,12 +4086,15 @@ ul:not(.ul) {
   --padding-block-start: 0;
   --padding-block-end: 0;
   width: 100%;
+  max-width: 475px;
+  height: 100%;
   background: var(--bg);
   border-radius: var(--border-radius-2);
   transition: var(--transition2);
   overflow: hidden;
-  max-width: 650px;
   box-shadow: var(--set-box-shadow-4);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .my-card-content {

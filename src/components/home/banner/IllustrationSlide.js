@@ -5,6 +5,7 @@ const IllustrationSlide = ({
   images,
   slideIndex,
   illustrationDataLength,
+  IllustrationSlideTiming,
 }) => {
   return (
     <>
@@ -36,7 +37,7 @@ const IllustrationSlide = ({
           ]}
           rotationRange={120}
           createEach={80}
-          forDuration={7500}
+          forDuration={IllustrationSlideTiming - 500}
           appear={slideIndex === 3}
         />
       ) : null}

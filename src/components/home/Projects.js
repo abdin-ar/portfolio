@@ -8,9 +8,9 @@ const Projects = () => {
       <h2 className="h3 text-center mb-2" id="projects">
         Projects
       </h2>
-      <article className="max-width flex justify-center align-center gap-4 column">
-        {sortData(projectsData).map((project) => {
-          return <ProjectCard key={project.id} {...project} />;
+      <article className="max-width gap-4 projects-list">
+        {sortData(projectsData).map((project, index) => {
+          return <ProjectCard key={project.id} index={index} {...project} />;
         })}
       </article>
     </section>
