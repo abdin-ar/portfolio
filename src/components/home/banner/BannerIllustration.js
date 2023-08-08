@@ -43,6 +43,7 @@ const BannerIllustration = () => {
                   : "hidden"
               }`}
             >
+              <span>{slide.id + 1}. </span>
               {slide.text}
             </p>
           );

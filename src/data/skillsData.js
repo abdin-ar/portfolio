@@ -21,18 +21,33 @@ const skillsData = [
   },
   {
     id: 4,
+    text: "Three JS",
+    image: "three",
+  },
+  {
+    id: 5,
     text: "Node Js",
     image: "node",
   },
   {
-    id: 5,
+    id: 6,
+    text: "Mongo DB",
+    image: "mongodb",
+  },
+  {
+    id: 7,
     text: "Photoshop",
     image: "photoshop",
   },
   {
-    id: 6,
+    id: 8,
     text: "3ds Max",
     image: "3dsmax",
+  },
+  {
+    id: 9,
+    text: "Figma",
+    image: "figma",
   },
 ];
 

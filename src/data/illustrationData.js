@@ -1,7 +1,7 @@
 const illustrationData = [
   {
     id: 0,
-    text: "1. I create a great website for your business.",
+    text: "I create a great website for your business.",
     images: [
       {
         src: "paint3.png",
@@ -13,7 +13,7 @@ const illustrationData = [
   },
   {
     id: 1,
-    text: "2. Customers become impressed of your business.",
+    text: "Customers become impressed of your business.",
     images: [
       {
         src: "customer1.png",
@@ -39,14 +39,14 @@ const illustrationData = [
   },
   {
     id: 2,
-    text: "3. Customers pay more money for your products.",
+    text: "Customers pay more money for your products.",
     images: [
       { src: "payments.png", alt: "payments", class: "illustration-img-2-1" },
     ],
   },
   {
     id: 3,
-    text: "4. Your business becomes more profitable!",
+    text: "Your business becomes more profitable!",
     images: [
       { src: "profit.png", alt: "profit", class: "illustration-img-3-1" },
     ],

@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import DarkModeToggleSaved from "./DarkModeToggleSaved";
 import NavbarComponent from "./Navbar/NavbarComponent";
 import navLinks from "../../data/navLinks";

@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import MyLink from "../../router/MyLink";
 
 const NavLinkEl = ({ to, tooltip, children, classes, setToggleState }) => {

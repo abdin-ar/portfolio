@@ -1,27 +1,18 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 
-const MyLink = (props) => {
+const MyLink = ({ to, type, children, ...props }) => {
   const { pathname } = useLocation();
-
-  const { to, type, children } = props;
-
-  const newProps = { ...props };
-  for (const prop in newProps) {
-    if (prop === "to" || prop === "type" || prop === "children") {
-      delete newProps[prop];
-    }
-  }
 
   if (pathname === to.split("#")[0]) {
     if (to && to.split("#").length > 1) {
       return (
-        <a href={to} {...newProps}>
+        <a href={to} {...props}>
           {children}
         </a>
       );
     } else {
       return (
-        <a href="#" {...newProps}>
+        <a href="#" {...props}>
           {children}
         </a>
       );
@@ -29,21 +20,21 @@ const MyLink = (props) => {
   } else {
     if (type === "Link") {
       return (
-        <Link to={to} {...newProps}>
+        <Link to={to} {...props}>
           {children}
         </Link>
       );
     }
     if (type === "NavLink") {
       return (
-        <NavLink to={to} {...newProps}>
+        <NavLink to={to} {...props}>
           {children}
         </NavLink>
       );
     }
 
     return (
-      <a href={to} {...newProps}>
+      <a href={to} {...props}>
         {children}
       </a>
     );

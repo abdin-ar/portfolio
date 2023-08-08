@@ -12,7 +12,12 @@ const HireMe = () => {
         to hear from you.
       </p>
       <div className="mt-4 flex justify-center gap-2 wrap">
-        <ContactCard icon="envelope" text="devabdin@gmail.com" />
+        <ContactCard
+          icon="envelope"
+          text="devabdin@gmail.com"
+          title={"Email address. Click to copy to clipboard"}
+          onClick={() => navigator.clipboard.writeText("devabdin@gmail.com")}
+        />
       </div>
     </section>
   );
