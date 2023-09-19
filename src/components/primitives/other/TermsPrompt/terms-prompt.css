@@ -1,0 +1,58 @@
+.terms-prompt {
+  position: fixed;
+  --inset-block-end: 0;
+  --inset-inline-start: 0;
+  --inset-inline-end: 0;
+  --margin-block-start: 0;
+  --margin-block-end: 0;
+  --margin-inline-start: 0;
+  --margin-inline-end: 0;
+  --padding-block-start: 0.5em;
+  --padding-block-end: 0.5em;
+  --padding-inline-start: 0.5em;
+  --padding-inline-end: 0.5em;
+  background-color: hsl(var(--grey-base), var(--grey-30), 0.7);
+  backdrop-filter: blur(4px);
+  color: hsl(var(--grey-base), var(--grey-95));
+  display: grid;
+  place-content: center;
+  font-size: 0.8em;
+  z-index: 50;
+}
+.terms-prompt > div {
+  max-width: var(--max-width);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 2);
+}
+.terms-prompt p {
+  --margin-block-start: 0;
+  --margin-block-end: 0;
+  --margin-inline-start: 0;
+  --margin-inline-end: 0;
+  display: inline;
+}
+.terms-prompt .a {
+  --margin-inline-end: 1em;
+  color: hsl(var(--primary-base), var(--primary-10));
+}
+.terms-prompt .a:hover {
+  color: hsl(var(--primary-base), var(--primary-40));
+}
+.dark-mode .terms-prompt .a:hover {
+  color: hsl(var(--primary-base), var(--primary-20));
+}
+.terms-prompt .btn {
+  --padding-block-start: calc(var(--local-spacing) * 0.25em);
+  --padding-block-end: calc(var(--local-spacing) * 0.25em);
+  --padding-inline-start: calc(var(--local-spacing) * 0.5em);
+  --padding-inline-end: calc(var(--local-spacing) * 0.5em);
+  display: inline;
+  background-color: hsl(var(--grey-base), var(--grey-70));
+  color: hsl(var(--grey-base), var(--grey-30));
+}
+.terms-prompt .btn:hover {
+  background-color: hsl(var(--grey-base), var(--grey-80));
+  color: hsl(var(--grey-base), var(--grey-20));
+}

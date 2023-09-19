@@ -1,0 +1,7 @@
+.normal-section {
+  --margin-block-start: calc(var(--spacing) * 4);
+  --margin-block-end: calc(var(--spacing) * 4);
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}

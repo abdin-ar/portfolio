@@ -1,0 +1,89 @@
+/* input & textarea */
+.input,
+.textarea {
+  --bg: hsl(var(--grey-base), var(--grey-95));
+  --txt: var(--text-color);
+  --padding-block-start: calc(0.5em * var(--local-spacing));
+  --padding-block-end: calc(0.5em * var(--local-spacing));
+  --padding-inline-start: calc(0.5em * var(--local-spacing));
+  --padding-inline-end: calc(0.5em * var(--local-spacing));
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+  background: var(--bg);
+  color: var(--txt);
+  border: 0.05em solid hsl(var(--grey-base), var(--grey-50));
+  outline: none;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: hsl(var(--primary-base), var(--primary-50));
+}
+
+.textarea {
+  resize: none;
+  height: 7em;
+  border-radius: var(--border-radius);
+}
+
+/* validated form row */
+.form-row-validated {
+  --margin-block-end: 0;
+  position: relative;
+}
+
+.form-row-validated textarea {
+  height: calc(8em + var(--spacing));
+}
+
+.form-row-validated > .fa-check-circle,
+.form-row-validated > .fa-exclamation-circle {
+  position: absolute;
+  --inset-inline-end: 4px;
+  --inset-block-start: 0.5em;
+  background-color: hsl(var(--grey-base), var(--grey-95));
+  border-radius: 50%;
+}
+
+.form-row-validated > .fa-check-circle {
+  --txt: hsl(var(--success-base), var(--success-20));
+  color: var(--txt);
+  visibility: hidden;
+}
+
+.form-row-validated > .fa-exclamation-circle {
+  --txt: hsl(var(--error-base), var(--error-20));
+  color: var(--txt);
+  visibility: hidden;
+}
+
+.form-row-validated > span {
+  --txt: hsl(var(--error-base), var(--error-20));
+  color: var(--txt);
+  font-size: var(--smaller-font-size);
+  display: block;
+  --margin-block-start: 0;
+  --margin-block-end: var(--spacing);
+  visibility: hidden;
+}
+
+.form-row-validated.success .input,
+.form-row-validated.success .textarea,
+.form-row-validated.validated-select-multi.success .select-multi {
+  border-color: hsl(var(--success-base), var(--success-20));
+}
+
+.form-row-validated.error .input,
+.form-row-validated.error .textarea,
+.form-row-validated.validated-select-multi.error .select-multi {
+  border-color: hsl(var(--error-base), var(--error-20));
+}
+
+.form-row-validated.success > .fa-check-circle {
+  visibility: visible;
+}
+
+.form-row-validated.error > .fa-exclamation-circle,
+.form-row-validated.error > span {
+  visibility: visible;
+}

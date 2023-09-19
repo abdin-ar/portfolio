@@ -1,0 +1,9 @@
+.main {
+  width: 100%;
+}
+
+.main > * {
+  width: 100%;
+  --padding-inline-start: var(--content-padding);
+  --padding-inline-end: var(--content-padding);
+}

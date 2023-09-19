@@ -1,0 +1,76 @@
+/* basic button classes */
+.btn {
+  --local-spacing: 1;
+  --padding-block-start: calc(0.5em * var(--local-spacing));
+  --padding-block-end: calc(0.5em * var(--local-spacing));
+  --padding-inline-start: calc(1em * var(--local-spacing));
+  --padding-inline-end: calc(1em * var(--local-spacing));
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-sm);
+  letter-spacing: var(--letter-spacing);
+  transition: var(--transition);
+  text-transform: capitalize;
+  font-weight: var(--set-button-font-weight);
+  display: inline-flex;
+  gap: var(--spacing);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: 24px;
+  min-height: 24px;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.btn.full-width {
+  width: 100%;
+  max-width: none;
+}
+
+.btn.primary {
+  color: hsl(var(--grey-base), var(--grey-90));
+  background-color: hsl(var(--primary-base), var(--primary-50));
+}
+.btn.primary:hover,
+.btn.primary:focus {
+  background-color: hsl(var(--primary-base), var(--primary-30));
+}
+.dark-mode .btn.primary {
+  color: hsl(var(--grey-base), var(--grey-10));
+  background-color: hsl(var(--primary-base), var(--primary-70));
+}
+.dark-mode .btn.primary:focus,
+.dark-mode .btn.primary:hover {
+  background-color: hsl(var(--primary-base), var(--primary-50));
+}
+
+.btn.grey {
+  color: hsl(var(--grey-base), var(--grey-10));
+  background-color: hsl(var(--grey-base), var(--grey-80));
+}
+.btn.grey:hover,
+.btn.grey:focus {
+  background-color: hsl(var(--grey-base), var(--grey-70));
+}
+.dark-mode .btn.grey:focus,
+.dark-mode .btn.grey:hover {
+  background-color: hsl(var(--grey-base), var(--grey-70));
+}
+
+.btn.transparent {
+  text-shadow: var(--set-text-shadow-2);
+  background: transparent;
+  color: hsl(var(--grey-base), var(--grey-5));
+}
+.btn.transparent:hover,
+.btn.transparent:focus {
+  text-shadow: var(--set-text-shadow-2-hover);
+  color: hsl(var(--primary-base), var(--primary-60));
+}
+.dark-mode .btn.transparent:focus,
+.dark-mode .btn.transparent:hover {
+  color: hsl(var(--primary-base), var(--primary-40));
+}

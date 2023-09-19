@@ -1,0 +1,7 @@
+.label {
+  display: block;
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  --margin-block-end: var(--spacing);
+  --padding-inline-end: 2em;
+}

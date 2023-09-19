@@ -1,0 +1,17 @@
+.form-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 calc(var(--spacing) * 5);
+}
+
+@media screen and (min-width: 800px) {
+  .form-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-columns > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

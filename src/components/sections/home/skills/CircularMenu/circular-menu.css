@@ -1,0 +1,55 @@
+.circular-menu {
+  --menu-size: calc(var(--h3-font-size) * 10);
+  --menu-font-size: calc(var(--h3-font-size) * 0.4);
+  position: relative;
+  width: var(--menu-size);
+  height: var(--menu-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-menu-toggle {
+  position: absolute;
+  width: calc(var(--menu-size) / 2);
+  height: calc(var(--menu-size) / 2);
+  background-color: hsl(var(--grey-base), var(--grey-95));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  border-radius: 50%;
+  text-align: center;
+  font-size: var(--h3-font-size);
+  font-family: var(--heading-font);
+  font-weight: var(--heading-weight);
+  line-height: var(--heading-line-height);
+  text-transform: capitalize;
+  transition: var(--transition2);
+  transform: rotate(0deg);
+}
+
+.skills-animation-fwd {
+  animation: rotation 60000ms linear both infinite;
+}
+
+.skills-animation-bkwd {
+  animation: reverse-rotation 60000ms linear both infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes reverse-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

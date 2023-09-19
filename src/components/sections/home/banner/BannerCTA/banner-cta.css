@@ -1,0 +1,35 @@
+.banner-cta {
+  position: relative;
+  z-index: 2;
+  gap: calc(var(--spacing) * 2);
+  --margin-block-start: calc(var(--spacing) * 2);
+  --margin-block-end: calc(var(--spacing) * 0);
+}
+
+.banner-cta > * {
+  animation: fade-top ease 1000ms both;
+  animation-delay: 5000ms;
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .banner-cta > * {
+    width: auto;
+  }
+}
+
+@keyframes fade-top {
+  0% {
+    opacity: 0;
+    transform: translateY(105%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* banner btn */
+.banner-btn {
+  --local-spacing: 1.5;
+}

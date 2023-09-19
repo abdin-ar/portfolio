@@ -1,0 +1,26 @@
+.nav-logo-link {
+  display: grid;
+  place-content: center;
+  max-height: calc(var(--nav-height) - var(--spacing));
+  color: var(--txt);
+  --margin-block-start: 0;
+  --margin-block-end: 0;
+  --margin-inline-start: 0;
+  --margin-inline-end: 0;
+}
+
+.nav-logo-link .img {
+  max-width: 12rem;
+}
+
+.nav-logo {
+  fill: hsl(var(--grey-base), var(--grey-5));
+  height: max(var(--h4-font-size), 2rem);
+  transition: var(--transition);
+}
+
+.nav-logo-link:hover .nav-logo,
+.nav-logo-link:focus .nav-logo {
+  fill: hsl(var(--primary-base), var(--primary-50));
+  filter: drop-shadow(2px 2px 5px hsl(var(--primary-base), var(--primary-70)));
+}

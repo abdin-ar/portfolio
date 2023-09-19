@@ -1,0 +1,12 @@
+/* navbar main */
+.navbar-main {
+  background-color: hsl(var(--grey-base), var(--grey-95), 0.6);
+  backdrop-filter: blur(8px);
+  --padding-block-start: calc(var(--spacing) * 1);
+  --padding-block-end: calc(var(--spacing) * 1);
+}
+
+/* navbar toggle */
+.navbar-toggle {
+  --local-spacing: 1.5;
+}

@@ -1,0 +1,6 @@
+.nav-cta {
+  --padding-block-start: calc(var(--spacing) * 1.5);
+  --padding-block-end: calc(var(--spacing) * 1.5);
+  --padding-inline-start: calc(var(--spacing) * 3);
+  --padding-inline-end: calc(var(--spacing) * 3);
+}

@@ -1,0 +1,12 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+}
+
+@media screen and (min-width: 800px) {
+  .banner {
+    flex-direction: row;
+  }
+}

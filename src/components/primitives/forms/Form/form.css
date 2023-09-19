@@ -1,0 +1,32 @@
+.form {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  border-radius: var(--border-radius);
+  background: hsl(var(--primary-base), var(--primary-90), 0.6);
+  backdrop-filter: blur(5px);
+  --padding-block-start: calc(var(--spacing) * 4);
+  --padding-block-end: calc(var(--spacing) * 4);
+  --padding-inline-start: calc(var(--spacing) * 5);
+  --padding-inline-end: calc(var(--spacing) * 5);
+  --margin-block-start: calc(var(--spacing) * 6);
+  --margin-block-end: calc(var(--spacing) * 6);
+  --margin-inline-start: auto;
+  --margin-inline-end: auto;
+  transition: var(--transition);
+}
+
+.wide-form {
+  width: calc(var(--max-width) - (var(--spacing) * 2.8));
+  max-width: var(--max-width);
+  border-radius: var(--border-radius-lg);
+  --margin-block-start: calc(var(--spacing) * 2);
+  --margin-block-end: 0;
+  --margin-inline-start: auto;
+  --margin-inline-end: auto;
+}
+
+@media screen and (min-width: 800px) {
+  .wide-form {
+    width: 100%;
+  }
+}

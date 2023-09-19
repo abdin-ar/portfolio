@@ -1,0 +1,72 @@
+.dark-section {
+  --is-not-first: 0;
+  --is-not-last: 0;
+  --padding-block-start: calc(
+    5vw + (((var(--spacing) * 4) + 5vw) * var(--is-not-first))
+  );
+  --padding-block-end: calc(
+    5vw + (((var(--spacing) * 4) + 2.5vw) * var(--is-not-last))
+  );
+  --margin-block-start: calc(
+    (-7.5vw + (var(--spacing) * 4)) * var(--is-not-first)
+  );
+  --margin-block-end: calc(
+    (-7.5vw + (var(--spacing) * 4)) * var(--is-not-last)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-section.not-first {
+  --is-not-first: 1;
+}
+.dark-section.not-last {
+  --is-not-last: 1;
+}
+
+.dark-section-bg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* background-color: hsl(var(--primary-base), var(--primary-80)); */
+  background-image: linear-gradient(
+    160deg,
+    hsl(var(--primary-base), var(--primary-70)),
+    hsl(var(--primary-base), var(--primary-80)),
+    hsl(var(--primary-base), var(--primary-90)),
+    hsl(var(--primary-base), var(--primary-70))
+  );
+  background-size: 100%
+    calc(100% - (2px * var(--is-not-first))- (2px * var(--is-not-last)));
+  background-repeat: no-repeat;
+  background-position: 0 2px;
+  position: absolute;
+  overflow: hidden;
+  z-index: -2;
+  isolation: isolate;
+}
+
+.dark-section.not-first::before {
+  content: "";
+  position: absolute;
+  --inset-block-start: 0;
+  --inset-inline-start: 0;
+  width: 100%;
+  height: 8vw;
+  z-index: -1;
+  background-color: hsl(var(--grey-base), var(--grey-95));
+  clip-path: ellipse(60vw 10vw at center -2vw);
+}
+
+.dark-section.not-last::after {
+  content: "";
+  position: absolute;
+  --inset-block-end: 0;
+  --inset-inline-start: 0;
+  width: 100%;
+  height: 8vw;
+  z-index: -1;
+  background-color: hsl(var(--grey-base), var(--grey-95));
+  clip-path: ellipse(60vw 10vw at center 13vw);
+}

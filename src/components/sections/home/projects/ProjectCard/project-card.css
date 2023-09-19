@@ -1,0 +1,61 @@
+.my-card-container {
+  width: 100%;
+  max-width: 29.7rem;
+  --margin-inline-start: auto;
+  --margin-inline-end: auto;
+}
+
+.my-card {
+  --margin-inline-start: auto;
+  --margin-inline-end: auto;
+  --margin-block-start: 0;
+  --margin-block-end: 0;
+  --padding-inline-start: 0;
+  --padding-inline-end: 0;
+  --padding-block-start: 0;
+  --padding-block-end: 0;
+  width: 100%;
+  height: 100%;
+  background: hsl(var(--primary-base), var(--primary-90));
+  border-radius: var(--border-radius-lg);
+  transition: var(--transition2);
+  overflow: hidden;
+  box-shadow: var(--set-box-shadow-4);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.my-card-content {
+  --margin-block-end: calc(var(--spacing) * 2 * var(--local-spacing));
+  --padding-block-start: calc(var(--spacing) * 2 * var(--local-spacing));
+  --padding-block-end: calc(var(--spacing) * 2 * var(--local-spacing));
+  --padding-inline-start: calc(var(--spacing) * 2 * var(--local-spacing));
+  --padding-inline-end: calc(var(--spacing) * 2 * var(--local-spacing));
+}
+
+.my-card-desc,
+.my-card-tech {
+  display: grid;
+  column-gap: calc(var(--spacing) * 4);
+}
+
+@media screen and (min-width: 800px) {
+  .my-card-desc {
+    grid-template-columns: 5fr 3fr;
+  }
+}
+
+.my-card-controllers {
+  display: flex;
+}
+
+.my-card-controllers .btn {
+  border-radius: 0;
+}
+
+.my-card-img {
+  width: 100%;
+  object-fit: contain;
+
+  background-color: hsl(var(--primary-base), var(--primary-95));
+}

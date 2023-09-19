@@ -1,0 +1,64 @@
+.skills-icon {
+  position: absolute;
+  list-style: none;
+  transform-origin: calc(var(--menu-size) / 2);
+  left: 0;
+  transition: var(--transition2);
+  transform: rotate(0deg)
+    translateX(calc((var(--menu-size) / 2) - (var(--menu-font-size) * 5)));
+}
+
+.skills-icon > div {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--menu-font-size) * 5);
+  height: calc(var(--menu-font-size) * 5);
+  background-color: hsl(var(--grey-base), var(--grey-95));
+  border-radius: 50%;
+  transition: var(--transition);
+  box-shadow: var(--set-box-shadow-3);
+}
+
+.skills-icon > div:hover,
+.skills-icon > div:focus {
+  box-shadow: var(--set-box-shadow-3-hover);
+}
+
+.skills-icon-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.skills-icon-content > * {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translate(var(--current-position), -50%);
+  transition: var(--transition);
+}
+
+.skills-icon-content > img {
+  object-fit: contain;
+  --current-position: 0;
+  padding: calc(var(--menu-font-size) * 1);
+}
+
+.skills-icon-content > p {
+  text-align: center;
+  --current-position: 100%;
+  --margin-block-end: 0;
+  font-size: var(--menu-font-size);
+}
+
+.skills-icon-content:hover > img {
+  --current-position: -100%;
+}
+
+.skills-icon-content:hover > p {
+  --current-position: 0;
+}

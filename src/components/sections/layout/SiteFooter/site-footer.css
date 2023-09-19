@@ -1,0 +1,10 @@
+.site-footer-link {
+  color: hsl(var(--primary-base), var(--primary-20));
+  transition: var(--transition);
+}
+.site-footer-link:hover {
+  color: hsl(var(--primary-base), var(--primary-50));
+}
+.dark-mode .site-footer-link:hover {
+  color: hsl(var(--primary-base), var(--primary-30));
+}

@@ -1,0 +1,49 @@
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(var(--spacing) * 3);
+  flex: 1;
+  overflow: hidden;
+  margin-block-end: calc(var(--spacing) * 1);
+}
+
+/* banner headings */
+.banner-h1 > span {
+  font-weight: bold;
+  font-size: var(--larger-font-size);
+  color: hsl(var(--primary-base), var(--primary-50));
+}
+
+.banner-h1,
+.banner-h2,
+.banner-p {
+  animation: fade-right ease 1000ms both;
+}
+
+.banner-h1 {
+  animation-delay: 500ms;
+  text-wrap: balance;
+}
+
+.banner-h2 {
+  animation-delay: 2000ms;
+  text-transform: uppercase;
+  color: hsl(var(--grey-base), var(--grey-30));
+}
+
+.banner-p {
+  animation-delay: 3500ms;
+  text-align: var(--text-justify-start);
+}
+
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-105%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

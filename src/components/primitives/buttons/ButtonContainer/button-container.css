@@ -1,0 +1,39 @@
+.btn-container {
+  --margin-block-start: calc(var(--spacing) * 2);
+  --margin-block-end: calc(var(--spacing) * 2);
+  --margin-inline-start: auto;
+  --margin-inline-end: auto;
+  display: flex;
+  gap: var(--spacing);
+  flex-wrap: wrap;
+}
+
+.btn-container.center {
+  justify-content: center;
+}
+.btn-container.end {
+  justify-content: flex-end;
+}
+.btn-container.start {
+  justify-content: flex-start;
+}
+.btn-container.nowrap {
+  flex-wrap: nowrap;
+}
+
+.btn-container.merged {
+  gap: 0;
+  flex-wrap: nowrap;
+}
+.btn-container.merged .btn:not(:is(:first-child, :last-child)) {
+  border-radius: 0;
+  white-space: normal;
+}
+.btn-container.merged .btn:last-child {
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+}
+.btn-container.merged .btn:first-child {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+}

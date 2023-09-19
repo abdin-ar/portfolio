@@ -1,0 +1,37 @@
+.alert {
+  --padding-block-start: calc(var(--spacing) * 0.75 * var(--local-spacing));
+  --padding-block-end: calc(var(--spacing) * 0.75 * var(--local-spacing));
+  --padding-inline-start: calc(var(--spacing) * 1.5 * var(--local-spacing));
+  --padding-inline-end: calc(var(--spacing) * 1.5 * var(--local-spacing));
+  color: var(--txt);
+  background: var(--bg);
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: var(--border-radius-sm);
+  letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
+  overflow: hidden;
+  height: auto;
+}
+
+.alert.general {
+  --margin-block-end: calc(var(--spacing) * 2);
+  font-size: var(--small-font-size);
+}
+
+.alert.error {
+  --txt: hsl(var(--error-base), var(--error-20));
+  --bg: hsl(var(--error-base), var(--error-80));
+}
+
+.alert.success {
+  --txt: hsl(var(--success-base), var(--success-20));
+  --bg: hsl(var(--success-base), var(--success-80));
+}
+
+.alert.closed {
+  height: 0;
+}

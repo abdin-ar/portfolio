@@ -1,0 +1,50 @@
+/* contact card */
+.contact-card {
+  background: hsl(var(--grey-base), var(--grey-95));
+  min-width: calc(var(--spacing) * 25);
+  max-width: 80vw;
+  border-radius: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contact-card:hover,
+.contact-card:focus {
+  background: hsl(var(--grey-base), var(--grey-90));
+}
+
+.contact-card > p {
+  text-align: center;
+  overflow-wrap: break-word;
+  --margin-inline-start: calc(var(--spacing) * 2);
+  --padding-inline-end: calc(var(--spacing) * 2.5);
+}
+
+.contact-card > i {
+  color: hsl(var(--grey-base), var(--grey-90));
+  background-color: hsl(var(--primary-base), var(--primary-50));
+  display: grid;
+  place-content: center;
+  --padding-block-start: calc(var(--spacing) * 2);
+  --padding-block-end: calc(var(--spacing) * 2);
+  --padding-inline-start: calc(var(--spacing) * 2.5);
+  --padding-inline-end: calc(var(--spacing) * 2);
+  transition: var(--transition);
+}
+
+.contact-card:hover > i,
+.contact-card:focus > i {
+  background-color: hsl(var(--primary-base), var(--primary-30));
+}
+.dark-mode .contact-card > i {
+  color: hsl(var(--grey-base), var(--grey-10));
+  background-color: hsl(var(--primary-base), var(--primary-70));
+}
+.dark-mode .contact-card:focus > i,
+.dark-mode .contact-card:hover > i {
+  background-color: hsl(var(--primary-base), var(--primary-50));
+}

@@ -1,3 +1,14 @@
+// sortData V-2.0.0
+
+/**
+ * A function that sorts an array of objects according to data inside objects
+ * @param {{[x:string]:any}[]} data An array of objects to sort
+ * @param {string} sortBy The key inside the objects to sort objects by its value
+ * @param {'number'|'string'|'boolean'} typeOfSortBy The type of the content to sort by
+ * @param {'asc'|'desc'} ascORdesc Sort ascending or descending
+ * @returns The same array of objects that was input sorted
+ */
+
 export default function sortData(
   data,
   sortBy = "no",
@@ -53,6 +64,12 @@ export default function sortData(
   }
   return data;
 }
+
+/**
+ * A function that takes in a boolean and returns 0 if false or 1 if true
+ * @param {boolean} boolean The input boolean
+ * @returns {number} Returns 0 if false or 1 if true
+ */
 
 function booleanToNumbers(boolean) {
   if (boolean === true) {
