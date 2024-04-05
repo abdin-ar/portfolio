@@ -2,7 +2,7 @@ import React from "react";
 import "./form.css";
 
 /**
- * @type {React.FC<{isWide:boolean} & React.FormHTMLAttributes>}
+ * @type {React.FC<{isWide?:boolean} & React.FormHTMLAttributes>}
  */
 const Form = ({ isWide = false, className, children, ...props }) => {
   return (
